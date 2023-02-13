@@ -1,25 +1,43 @@
 package com.example.countryinformation;
 
 public class CountryClass {
-    private int population;
-    private  int area;
+    private double population;
+    private double area;
     private String language;
     private String currency;
-    private String captial;
+    private String capital;
+    private String populationUnit;
+    private String areaUnit;
 
-    public int getPopulation() {
+    public String getPopulationUnit() {
+        return populationUnit;
+    }
+
+    public void setPopulationUnit(String populationUnit) {
+        this.populationUnit = populationUnit;
+    }
+
+    public String getAreaUnit() {
+        return areaUnit;
+    }
+
+    public void setAreaUnit(String areaUnit) {
+        this.areaUnit = areaUnit;
+    }
+
+    public double getPopulation() {
         return population;
     }
 
-    public void setPopulation(int population) {
+    public void setPopulation(double population) {
         this.population = population;
     }
 
-    public int getArea() {
+    public double getArea() {
         return area;
     }
 
-    public void setArea(int area) {
+    public void setArea(double area) {
         this.area = area;
     }
 
@@ -39,11 +57,11 @@ public class CountryClass {
         this.currency = currency;
     }
 
-    public String getCaptial() {
-        return captial;
+    public String getCapital() {
+        return capital;
     }
 
-    public void setCaptial(String captial) {
-        this.captial = captial;
+    public void setCapital(String capital) {
+        this.capital = capital;
     }
 }

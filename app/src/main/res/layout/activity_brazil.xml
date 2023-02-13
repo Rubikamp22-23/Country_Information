@@ -5,8 +5,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AustraliaActivity"
+    tools:context=".BrazilActivity"
     android:background="@color/white">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/Brazil_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Brazil"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/back_button"
@@ -17,27 +30,15 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_margin="10dp"/>
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/australia_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Australia"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:layout_marginTop="20dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/australia_flag"
+        android:id="@+id/brazil_flag"
         android:layout_width="320dp"
         android:layout_height="180dp"
-        android:src="@drawable/australia_flag"
+        android:src="@drawable/brazil_flag"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/australia_textView"
+        app:layout_constraintTop_toBottomOf="@+id/Brazil_textView"
         android:layout_marginTop="40dp"/>
 
     <RelativeLayout
@@ -46,18 +47,18 @@
         android:layout_height="40dp"
         android:background="@color/gray"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/australia_flag"
+        app:layout_constraintTop_toBottomOf="@+id/brazil_flag"
         android:layout_margin="30dp">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/population"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:text="Population:"
-        android:textSize="22sp"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="30dp"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/population"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Population:"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="30dp"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/population_answer"
@@ -65,7 +66,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="22sp"
-            tools:text="229.9"
+            tools:text="229.4"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginStart="200dp"/>
 
@@ -75,13 +76,13 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="14sp"
-            tools:text="mm"
+            tools:text="million"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="5dp"
             android:layout_marginStart="260dp"/>
 
-</RelativeLayout>
+    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/Relative_layout2"
@@ -110,7 +111,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="22sp"
-            tools:text="389.5"
+            tools:text="38,5"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginStart="200dp"/>
 
@@ -125,6 +126,7 @@
             android:layout_marginStart="260dp"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="5dp"/>
+
 
     </RelativeLayout>
 
@@ -187,9 +189,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="22sp"
             android:layout_marginTop="5dp"
-            tools:text="Australian Dollar "
+            tools:text="Dollar "
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginStart="200dp"/>
 

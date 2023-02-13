@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/purple_200">
+    android:background="@color/white">
+
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/Country_Information"
+        android:id="@+id/Country_Information_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Country Information"
-        android:textSize="26dp"
+        android:textSize="26sp"
         android:textStyle="bold"
         android:textColor="@color/black"
         android:layout_marginTop="20dp"
@@ -19,22 +20,86 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <RelativeLayout
-        android:id="@+id/australia_layout"
-        android:layout_width="150dp"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/australia_button"
+            android:layout_width="160dp"
+            android:layout_height="180dp"
+            android:background="@drawable/australia_image"
+            app:layout_constraintTop_toBottomOf="@+id/Country_Information_textView"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="@dimen/margin3x"
+            android:text="Australia"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/india_button"
+        android:layout_width="160dp"
         android:layout_height="180dp"
-        android:background="@color/purple_300"
-        app:layout_constraintTop_toBottomOf="@+id/Country_Information"
+        android:background="@drawable/india_image"
+        app:layout_constraintTop_toBottomOf="@+id/australia_button"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="40dp">
+        android:layout_marginStart="@dimen/margin3x"
+        android:text="India"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
 
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/australia_imageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/astralia"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/china_button"
+        android:layout_width="160dp"
+        android:layout_height="180dp"
+        android:background="@drawable/china_image"
+        app:layout_constraintTop_toBottomOf="@+id/india_button"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="@dimen/margin3x"
+        android:text="China"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
 
-    </RelativeLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/france_button"
+        android:layout_width="160dp"
+        android:layout_height="180dp"
+        android:background="@drawable/france_image"
+        app:layout_constraintTop_toBottomOf="@id/Country_Information_textView"
+        app:layout_constraintStart_toEndOf="@+id/australia_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="@dimen/margin3x"
+        android:text="France"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/brazil_button"
+        android:layout_width="160dp"
+        android:layout_height="180dp"
+        android:background="@drawable/brazil_image"
+        app:layout_constraintTop_toBottomOf="@id/france_button"
+        app:layout_constraintStart_toEndOf="@+id/australia_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="@dimen/margin3x"
+        android:text="Brazil"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/egypt_button"
+        android:layout_width="160dp"
+        android:layout_height="180dp"
+        android:background="@drawable/edypt_image"
+        app:layout_constraintTop_toBottomOf="@id/brazil_button"
+        app:layout_constraintStart_toEndOf="@+id/australia_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="@dimen/margin3x"
+        android:text="Egypt"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

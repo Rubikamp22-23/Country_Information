@@ -7,12 +7,13 @@ import androidx.appcompat.widget.AppCompatTextView;
 import android.content.Intent;
 import android.os.Bundle;
 
-public class AustraliaActivity extends AppCompatActivity {
+public class EgyptActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_australia);
+        setContentView(R.layout.activity_egypt);
+
         AppCompatTextView capitalName = findViewById(R.id.capital_answer);
         AppCompatTextView populationName = findViewById(R.id.population_answer);
         AppCompatTextView currencyName = findViewById(R.id.currency_answer);
@@ -22,18 +23,18 @@ public class AustraliaActivity extends AppCompatActivity {
         AppCompatTextView populationUnit = findViewById(R.id.population_unit);
         AppCompatTextView areaUnit = findViewById(R.id.area_unit);
 
-        backButton.setOnClickListener(view -> startActivity(new Intent(AustraliaActivity.this,MainActivity.class)));
+        backButton.setOnClickListener(view -> startActivity(new Intent(EgyptActivity.this,MainActivity.class)));
 
         //create an object
         CountryClass country = new CountryClass();
 
 
         //setting data
-        country.setPopulation(25.69);
-        country.setArea(7.688);
-        country.setCurrency("Australian Dollar");
-        country.setLanguage("English");
-        country.setCapital("Canberra");
+        country.setPopulation(109.3);
+        country.setArea(1.002);
+        country.setCurrency("Pound  E£");
+        country.setLanguage("Arabic");
+        country.setCapital("Cairo");
         country.setAreaUnit("million km2");
         country.setPopulationUnit("million");
 
