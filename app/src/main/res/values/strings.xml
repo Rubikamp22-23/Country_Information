@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Country Information</string>
+    <string name="population">Population:</string>
 </resources>

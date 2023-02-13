@@ -41,24 +41,27 @@
         app:layout_constraintTop_toBottomOf="@+id/Brazil_textView"
         android:layout_marginTop="40dp"/>
 
-    <RelativeLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/Relative_layout1"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:background="@color/gray"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/brazil_flag"
-        android:layout_margin="30dp">
+        android:layout_margin="@dimen/space_8x">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/population"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:text="Population:"
+            android:text="@string/population"
             android:textSize="22sp"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="30dp"/>
+            android:layout_gravity="center|end"
+            android:layout_weight="0.6" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/population_answer"
@@ -66,9 +69,9 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="22sp"
+            android:layout_gravity="center"
             tools:text="229.4"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginStart="200dp"/>
+            android:layout_weight="0.2" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/population_unit"
@@ -76,24 +79,23 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="14sp"
-            tools:text="million"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="5dp"
-            android:layout_marginStart="260dp"/>
+            android:layout_gravity="center"
+            android:layout_weight="0.2"
+            tools:text="million" />
 
-    </RelativeLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <RelativeLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/Relative_layout2"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:background="@color/gray"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Relative_layout1"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginStart="30dp">
+        android:layout_margin="@dimen/space_8x">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/area"
@@ -101,9 +103,9 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:text="Area:"
-            android:textSize="22sp"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="30dp"/>
+            android:textSize="@dimen/text_size_large"
+            android:layout_gravity="center|end"
+            android:layout_weight="0.6" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/area_answer"
@@ -111,9 +113,9 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="22sp"
+            android:layout_gravity="center"
             tools:text="38,5"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginStart="200dp"/>
+            android:layout_weight="0.2" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/area_unit"
@@ -121,25 +123,24 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="14sp"
-            tools:text="mm"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginStart="260dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="5dp"/>
+            android:layout_gravity="center"
+            android:layout_weight="0.2"
+            tools:text="mm" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 
-    </RelativeLayout>
-
-    <RelativeLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/Relative_layout3"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:background="@color/gray"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Relative_layout2"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginStart="30dp">
+        android:layout_margin="@dimen/space_8x">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/language"
@@ -147,21 +148,53 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:text="Language:"
-            android:textSize="22sp"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="30dp"/>
+            android:textSize="@dimen/text_size_large"
+            android:layout_gravity="center|end"
+            android:layout_weight="0.6" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/language_answer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:textSize="22sp"
-            tools:text="English"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginStart="200dp"/>
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:layout_weight="0.2"
+            tools:text="mm" />
 
-    </RelativeLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/Relative_layout3"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:background="@color/gray"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/Relative_layout2"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_marginEnd="30dp"-->
+<!--        android:layout_marginStart="30dp">-->
+
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:id="@+id/language"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:text="Language:"-->
+<!--            android:textSize="22sp"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            android:layout_marginStart="30dp"/>-->
+
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:id="@+id/language_answer"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="22sp"-->
+<!--            tools:text="English"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            android:layout_marginStart="200dp"/>-->
+
+<!--    </RelativeLayout>-->
 
     <RelativeLayout
         android:id="@+id/Relative_layout4"
